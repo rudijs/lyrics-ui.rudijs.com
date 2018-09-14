@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
+import Search from "@material-ui/icons/Search";
 import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
@@ -11,6 +12,10 @@ const styles = theme => ({
     maxWidth: 600,
     margin: "0 auto",
     padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
+  },
+  icon: {
+    margin: theme.spacing.unit,
+    fontSize: 32
   }
 });
 
@@ -21,12 +26,13 @@ const HeroUnit = props => {
     <div className={classes.heroUnit}>
       <div className={classes.heroContent}>
         <Typography
-          variant="display3"
+          variant="display2"
           align="center"
           color="textPrimary"
           gutterBottom
         >
-          Album layout
+          <Search className={classes.icon} />
+          Search for a Song
         </Typography>
         <Typography
           variant="title"
@@ -34,9 +40,7 @@ const HeroUnit = props => {
           color="textSecondary"
           paragraph
         >
-          Something short and leading about the collection below—its contents,
-          the creator, etc. Make it short and sweet, but not too short so folks
-          don&apos;t simply skip over it entirely.
+          Get the lyrics for any song.
         </Typography>
       </div>
     </div>

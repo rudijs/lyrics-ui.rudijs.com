@@ -2,18 +2,23 @@ import React from "react";
 import "typeface-roboto";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import Navbar from "./layout/Navbar";
-import Footer from "./layout/Footer";
-import HeroUnit from "./layout/HeroUnit";
+import { Provider } from "./context";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import HeroUnit from "./components/layout/HeroUnit";
+import Index from "./components/layout/Index";
 
 const App = props => {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Navbar />
-      <HeroUnit />
-      <Footer />
-    </React.Fragment>
+    <Provider>
+      <React.Fragment>
+        <CssBaseline />
+        <Navbar />
+        <HeroUnit />
+        <Index />
+        <Footer />
+      </React.Fragment>
+    </Provider>
   );
 };
 

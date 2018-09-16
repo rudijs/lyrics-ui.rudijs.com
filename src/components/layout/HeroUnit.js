@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Search from "@material-ui/icons/Search";
-import { withStyles } from "@material-ui/core/styles";
 
 const styles = theme => ({
   heroUnit: {

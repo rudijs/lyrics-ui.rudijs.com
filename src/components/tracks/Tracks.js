@@ -31,7 +31,7 @@ const Tracks = props => {
         if (track_list === undefined || track_list.length === 0) {
           return <Spinner />;
         }
-        console.log(101, value);
+
         return (
           <div className={classes.layout}>
             <Grid container spacing={40} justify="space-around">

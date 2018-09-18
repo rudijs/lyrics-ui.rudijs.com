@@ -4,7 +4,8 @@ import primaryColor from "@material-ui/core/colors/indigo";
 
 export default createMuiTheme({
   palette: {
-    primary:primaryColor
+    type: "light",
+    primary: primaryColor
     // secondary: pink
   }
   // typography: {

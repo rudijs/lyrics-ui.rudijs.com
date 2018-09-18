@@ -1,5 +1,5 @@
 const styles = theme => {
-  console.log("theme", theme);
+  // console.log("theme", theme);
   return {
     layout: {
       width: "auto",

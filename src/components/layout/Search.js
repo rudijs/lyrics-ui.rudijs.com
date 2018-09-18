@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 // import Search from "@material-ui/icons/Search";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+// import axios from 'axios'
 
 const styles = theme => ({
   heroUnit: {
@@ -14,10 +15,6 @@ const styles = theme => ({
     maxWidth: 600,
     margin: "0 auto",
     padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
-  },
-  icon: {
-    margin: theme.spacing.unit,
-    fontSize: 32
   },
   formElement: {
     display: "block",
@@ -38,6 +35,11 @@ class Search extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  findTrack = e => {
+    e.preventDefault()
+    console.log(e)
+  }
+
   render() {
     return (
       <div className={this.classes.heroUnit}>
@@ -48,7 +50,6 @@ class Search extends Component {
             color="textPrimary"
             gutterBottom
           >
-            {/* <Search className={classes.icon} /> */}
             Search for a Song
           </Typography>
           <Typography
@@ -59,7 +60,7 @@ class Search extends Component {
           >
             Get the lyrics for any song.
           </Typography>
-          <form>
+          <form onSubmit={this.findTrack}>
             <TextField
               name="trackTitle"
               label="Track Title"
@@ -74,6 +75,7 @@ class Search extends Component {
 
             <br />
             <Button
+              type="submit"
               color="primary"
               variant="contained"
               className={this.classes.formElement}

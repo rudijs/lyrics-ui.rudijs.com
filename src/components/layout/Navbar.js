@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 
 const Navbar = () => {
   return (
-    <AppBar position="static" color="default">
+    <AppBar position="static">
       <Toolbar>
         <Typography variant="title" color="inherit" align="right">
           Lyric Finder

@@ -9,21 +9,26 @@ import Footer from "./components/layout/Footer";
 import Index from "./components/layout/Index";
 import Lyrics from "./components/tracks/Lyrics";
 
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import theme from "./components/layout/theme";
+
 const App = props => {
   return (
-    <Provider>
-      <Router>
-        <React.Fragment>
-          <CssBaseline />
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Index} />
-            <Route exact path="/lyrics/track/:id" component={Lyrics} />
-          </Switch>
-          <Footer />
-        </React.Fragment>
-      </Router>
-    </Provider>
+    <MuiThemeProvider theme={theme}>
+      <Provider>
+        <Router>
+          <React.Fragment>
+            <CssBaseline />
+            <Navbar />
+            <Switch>
+              <Route exact path="/" component={Index} />
+              <Route exact path="/lyrics/track/:id" component={Lyrics} />
+            </Switch>
+            <Footer />
+          </React.Fragment>
+        </Router>
+      </Provider>
+    </MuiThemeProvider>
   );
 };
 

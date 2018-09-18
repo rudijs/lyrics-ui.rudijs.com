@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Moment from "react-moment";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 
 import styles from "../layout/styles";
 import Spinner from "../layout/Spinner";
@@ -62,14 +63,17 @@ class Lyrics extends Component {
       <div className={this.classes.layout}>
         <Card>
           <CardContent>
-            <Button component={Link} to="/" variant="outlined">
+            <Button component={Link} to="/" variant="outlined" color="primary">
+              <KeyboardArrowLeft />
               Go Back
             </Button>
 
             <br />
             <br />
 
-            <Typography variant="title" gutterBottom>{track.artist_name}</Typography>
+            <Typography variant="title" gutterBottom>
+              {track.artist_name}
+            </Typography>
 
             <Typography variant="body1">
               <span className={this.classes.preformatted}>
@@ -103,6 +107,11 @@ class Lyrics extends Component {
                 <Moment format="MM/DD/YYYY">{track.first_release_date}</Moment>
               </ListItem>{" "}
             </List>
+
+            <Button component={Link} to="/" variant="outlined" color="primary">
+              <KeyboardArrowLeft />
+              Go Back
+            </Button>
           </CardContent>
         </Card>
       </div>

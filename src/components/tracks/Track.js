@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Icon from "@material-ui/core/Icon";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 
 const styles = theme => ({
   button: {
@@ -27,20 +28,40 @@ const Track = props => {
           <Typography variant="title" gutterBottom>
             {track.artist_name}
           </Typography>
-          <Typography variant="subheading" gutterBottom style={{display: "flex", alignItems: "center"}}>
-            <Icon className={`fas fa-play`} style={{ fontSize: 18, marginRight: 4 }} />
-            <span><strong>Track</strong>: {track.track_name}</span>
+          <Typography
+            variant="subheading"
+            gutterBottom
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <Icon
+              className={`fas fa-play`}
+              style={{ fontSize: 18, marginRight: 4 }}
+            />
+            <span>
+              <strong>Track</strong>: {track.track_name}
+            </span>
           </Typography>
-          <Typography variant="body1" gutterBottom style={{display: "flex", alignItems: "center"}}>
-            <Icon className={`fas fa-compact-disc`} style={{ fontSize: 18, marginRight: 4 }} />
-            <span><strong>Album</strong>: {track.album_name}</span>
+          <Typography
+            variant="body1"
+            gutterBottom
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <Icon
+              className={`fas fa-compact-disc`}
+              style={{ fontSize: 18, marginRight: 4 }}
+            />
+            <span>
+              <strong>Album</strong>: {track.album_name}
+            </span>
           </Typography>
           <Button
             component={Link}
             to={`lyrics/track/${track.track_id}`}
             variant="outlined"
+            color="primary"
             className={classes.button}
           >
+            <KeyboardArrowRight />
             View Lyrics
           </Button>
         </CardContent>

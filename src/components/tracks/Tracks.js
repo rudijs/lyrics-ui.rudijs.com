@@ -6,20 +6,8 @@ import Spinner from "../layout/Spinner";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
+import styles from '../layout/styles'
 import Track from "./Track";
-
-const styles = theme => ({
-  layout: {
-    width: "auto",
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
-    [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
-      width: 1100,
-      marginLeft: "auto",
-      marginRight: "auto"
-    }
-  }
-});
 
 const Tracks = props => {
   const { classes } = props;

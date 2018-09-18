@@ -1,12 +1,12 @@
 import React from "react";
 
-import HeroUnit from "./HeroUnit";
+import Search from './Search'
 import Tracks from "../tracks/Tracks";
 
 export default () => {
   return (
     <React.Fragment>
-      <HeroUnit />
+      <Search />
       <Tracks />
     </React.Fragment>
   );
